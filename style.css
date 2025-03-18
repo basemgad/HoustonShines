@@ -1,20 +1,33 @@
+html {
+  transform: scale(0.8);
+  transform-origin: top left;
+  width: 125%;
+}
 
+@media (max-width: 700px) {
+  html {
+    transform: scale(1);
+    width: 100%;
+  }
+}
+
+/* Your existing CSS */
 html, body {
   overflow-x: hidden;
 }
-/* Option 1: Using the zoom property (works in Chrome, Edge, etc.) */
-
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 .petit-formal-script-regular {
   font-family: "Petit Formal Script", cursive;
   font-weight: 400;
   font-style: normal;
 }
+
 .outfit-regular {
   font-family: "Outfit", sans-serif;
   font-optical-sizing: auto;
@@ -22,13 +35,12 @@ html, body {
   font-style: normal;
 }
 
-/* The .header class for your section */
 .header {
   min-height: 100vh;
   width: 100%;
   position: relative;
 }
-/* top bar */
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -37,20 +49,22 @@ nav {
   background-color: rgba(12, 39, 88, 0.76);
   width: 100%;
 }
+
 nav img {
   width: 260px;
 }
+
 .nav-links {
   flex: 1;
   text-align: right;
 }
-/* 1) Remove or move horizontal padding off the <a> so it matches text width */
+
 .nav-links ul li {
   list-style: none;
   display: inline-block;
   margin: 0 30px;
 }
-/* 2) Make <a> inline-block and position: relative for the pseudo-element */
+
 .nav-links ul li a {
   display: inline-block;
   position: relative;
@@ -61,7 +75,7 @@ nav img {
   font-size: 21px;
   font-family: "Outfit", sans-serif;
 }
-/* 3) The pseudo-element is the same width as the <a>, which now equals text width */
+
 .nav-links ul li a::after {
   content: '';
   position: absolute;
@@ -74,9 +88,11 @@ nav img {
   transform-origin: center;
   transition: transform 0.3s ease;
 }
+
 .nav-links ul li a:hover::after {
   transform: scaleX(1);
 }
+
 .text-box {
   width: 90%;
   color: #030738;
@@ -86,16 +102,19 @@ nav img {
   transform: translate(-50%, -50%);
   text-align: center;
 }
+
 .text-box h1 {
   font-size: 80px;
   font-family: "Petit Formal Script", cursive;
 }
+
 .text-box p {
   margin: 30px 0px 40px;
   font-size: 40px;
   font-family: "Outfit", sans-serif;
   color: #030738;
 }
+
 .hero-btn {
   display: inline-block;
   text-decoration: none;
@@ -108,14 +127,17 @@ nav img {
   cursor: pointer;
   font-family: "Outfit", sans-serif;
 }
+
 .hero-btn:hover {
   border: 1px solid #00b7ff;
   background: #00b7ff;
   transition: 0.75s;
 }
+
 nav i[class*="fa-"] {
   display: none;
 }
+
 @media (max-width: 700px) {
   nav i[class*="fa-"] {
     display: block;
@@ -139,7 +161,7 @@ nav i[class*="fa-"] {
     display: block;
   }
   .nav-links {
-    position: fixed; /* Changed from absolute to fixed */
+    position: fixed;
     background: rgb(12, 39, 88);
     height: 100vh;
     width: 200px;
@@ -157,7 +179,6 @@ nav i[class*="fa-"] {
   }
 }
 
-/* About */
 .about {
   position: relative;
   font-family: "Outfit", sans-serif;
@@ -168,10 +189,12 @@ nav i[class*="fa-"] {
   background: url("images/rob-wingate-Fd9tUmRBJzk-unsplash.jpg") center center / cover no-repeat;
   color: #fff;
 }
+
 .about-inner {
   width: 80%;
   margin: 0 auto;
 }
+
 .about::before {
   content: "";
   position: absolute;
@@ -182,6 +205,7 @@ nav i[class*="fa-"] {
   background: linear-gradient(90deg, rgba(5, 22, 54, 0.8), rgba(2, 7, 24, 0.8));
   z-index: 0;
 }
+
 .about h1 {
   text-align: center;
   font-size: 55px;
@@ -190,6 +214,7 @@ nav i[class*="fa-"] {
   position: relative;
   z-index: 1;
 }
+
 .about-content {
   display: flex;
   justify-content: space-between;
@@ -199,6 +224,7 @@ nav i[class*="fa-"] {
   z-index: 1;
   margin-top: 50px;
 }
+
 .about-content p {
   width: 50%;
   font-size: 30px;
@@ -206,11 +232,13 @@ nav i[class*="fa-"] {
   text-align: left;
   line-height: 1.6;
 }
+
 .about-content img {
   width: 30%;
   object-fit: cover;
   box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.568);
 }
+
 @media (max-width: 700px) {
   .about h1 {
     font-size: 35px;
@@ -230,7 +258,7 @@ nav i[class*="fa-"] {
     text-align: center;
   }
 }
-/* Contact Section */
+
 .contact {
   position: relative;
   font-family: "Outfit", sans-serif;
@@ -241,10 +269,12 @@ nav i[class*="fa-"] {
   background: url("images/sssss.jpg") center center / cover no-repeat;
   color: #030738;
 }
+
 .contact-inner {
   width: 80%;
   margin: 0 auto;
 }
+
 .contact::before {
   content: "";
   position: absolute;
@@ -255,6 +285,7 @@ nav i[class*="fa-"] {
   background: linear-gradient(-45deg, rgba(255, 255, 255, 0.842), rgba(186, 214, 255, 0.8));
   z-index: 0;
 }
+
 .contact h1 {
   text-align: center;
   font-size: 55px;
@@ -263,6 +294,7 @@ nav i[class*="fa-"] {
   position: relative;
   z-index: 1;
 }
+
 .contact-content {
   display: flex;
   flex-direction: row-reverse;
@@ -273,6 +305,7 @@ nav i[class*="fa-"] {
   z-index: 1;
   margin-top: 50px;
 }
+
 .contact-content p {
   width: 50%;
   font-size: 35px;
@@ -280,11 +313,13 @@ nav i[class*="fa-"] {
   text-align: left;
   line-height: 2;
 }
+
 .contact-content img {
   width: 25%;
   object-fit: cover;
   box-shadow: 0px 0px 30px 10px rgba(50, 89, 148, 0.493);
 }
+
 @media (max-width: 700px) {
   .contact h1 {
     font-size: 35px;
@@ -304,6 +339,7 @@ nav i[class*="fa-"] {
     text-align: center;
   }
 }
+
 .book {
   position: relative;
   font-family: "Outfit", sans-serif;
@@ -314,6 +350,7 @@ nav i[class*="fa-"] {
   background: url("images/timothy-flippo-qyQE1KfBwA4-unsplash.jpg") center center / cover no-repeat;
   color: #fff;
 }
+
 .book::before {
   content: "";
   position: absolute;
@@ -324,24 +361,29 @@ nav i[class*="fa-"] {
   background: linear-gradient(90deg, rgba(5, 22, 54, 0.8), rgba(2, 7, 24, 0.8));
   z-index: 0;
 }
+
 .book-inner {
   width: 85%;
   margin: 0 auto;
   position: relative;
   z-index: 1;
 }
+
 .book-content {
   display: flex;
   align-items: flex-start;
   gap: 80px;
   justify-content: flex-start;
 }
+
 .book-col {
   flex: 0 0 700px;
 }
+
 .book-text {
   flex: 0 0 60%;
 }
+
 .book h1 {
   font-size: 55px;
   margin-top: -40px;
@@ -349,11 +391,13 @@ nav i[class*="fa-"] {
   position: relative;
   z-index: 1;
 }
+
 .book-content p {
   font-size: 35px;
   line-height: 2;
   padding-right: 100px;
 }
+
 .book-col input,
 .book-col textarea {
   width: 100%;
@@ -366,12 +410,14 @@ nav i[class*="fa-"] {
   font-weight: 700;
   color: #000000;
 }
+
 .book-col input::placeholder,
 .book-col textarea::placeholder {
   font-size: 18px;
   font-weight: 400;
   color: #646464;
 }
+
 .book .hero-btn {
   background-color: #00b7ff;
   color: #fff;
@@ -383,9 +429,11 @@ nav i[class*="fa-"] {
   cursor: pointer;
   transition: background-color 0.3s;
 }
+
 .book .hero-btn:hover {
   background-color: #006bb3;
 }
+
 @media (max-width: 700px) {
   .book h1 {
     font-size: 35px;
