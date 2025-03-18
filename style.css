@@ -6,6 +6,13 @@ html, body {
   overflow-x: hidden;
 }
 
+body {
+  transform: scale(0.8);
+  transform-origin: top;
+  width: 125%; /* Compensate for scale to maintain full width */
+}
+
+
 * {
   margin: 0;
   padding: 0;
