@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Clarity Quest</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/all.min.css">
+</head>
+<body>
+  <!-- 
+    We add the class "finisher-header" here so the library knows 
+    which element to target (we'll specify "className": "finisher-header" in our config).
+  -->
+  <section id="home" class="header finisher-header">
+    <nav>
+      <a href="index.html"><img src="images/1111.png" alt="Logo"></a>
+      <div class="nav-links" id="navLinks">
+        <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="#home">HOME</a></li>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+          <li><a href="#book">BOOK NOW</a></li>
+        </ul>
+      </div>
+      <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+    </nav>
+    
+    <div class="text-box">
+      <h1>See the Difference, Feel the Shine </h1>
+      <p>Local, Reliable, and Always Spotless</p>
+      <a href="#book" class="hero-btn">Book Now!</a>
+    </div>
+  </section>
+
+  <!-- 1) Include the Finisher Header script -->
+  <script src="finisher-header.es5.min.js"></script>
+
+  <!-- 2) Initialize Finisher Header with a config object -->
+  <script>
+    new FinisherHeader({
+      "count": 12,
+      "size": {
+        "min": 1300,
+        "max": 1500,
+        "pulse": 0
+      },
+      "speed": {
+        "x": {
+          "min": 1.6,
+          "max": 3.0
+        },
+        "y": {
+          "min": 1.6,
+          "max": 3.0
+        }
+      },
+      "colors": {
+        "background": "#ffffff",
+        "particles": [
+          "#ffffff",
+          "#6de3ff",
+          "#bbf0ff",
+          "#86c8ff"
+        ]
+      },
+      "blending": "normal",
+      "opacity": {
+        "center": 0.6,
+        "edge": 0.00
+      },
+      "skew": 0,
+      "shapes": [
+        "c"
+      ],
+      "className": "finisher-header"
+    });
+  </script>
+
+  <!-- About -->
+  <section id="about" class="about">
+    <div class="about-inner">
+      <h1>About Us</h1>
+      <div class="about-content">
+        <p>
+          At Clarity Quest Window Cleaning, we’re all about making your home shine. Founded and run by me, Basem, we’re a local, owner-operated company focused on delivering streak-free, spotless windows with reliable, friendly service. We believe in honest work, fair prices, and leaving every customer satisfied.
+          <br>Clear windows, no hassle—that’s our promise.
+        </p>
+        <img src="images/_1120348-Edit.jpg" alt="Window Cleaning">
+      </div>
+    </div>
+  </section>
+ 
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <div class="contact-inner">
+      <h1>Contact Us</h1>
+      <div class="contact-content">
+        <p>
+          Have questions or ready to book your window cleaning? <br>
+          <br>
+          📞 Call or Text: (832) 715-4136<br>
+          📧 Email: spitshinebarstool@gmail.com <br>
+          <br>
+          We’ll get back to you quickly—let’s make your windows shine!
+        </p>
+        <img src="images/qw.png" alt="Contact Image">
+      </div>
+    </div>
+  </section>
+
+  <!-- Book -->
+  <section id="book" class="book">
+    <div class="book-inner">
+      <div class="book-content">
+        <div class="book-text">
+          <h1>Book an Appointment</h1>
+          <p>
+            Ready for spotless windows? <br>
+            Fill out your details and I’ll personally reach out to you as soon as possible. Whether it’s a quote, a question, or scheduling a cleaning, I’ve got you covered. Fast, friendly, and no hassle—just clear communication and crystal-clear windows.
+          </p>
+        </div>
+
+        <div class="book-col">
+          <form action="form-handler.php" method="post">
+            <input type="text" name = "name" placeholder="Enter your name" required>
+            <input type="email" name = "email" placeholder="Enter email address" required>
+            <input type="text" name = "phone"  placeholder="Enter phone number" required>
+            <textarea rows="8" name = "time"  placeholder="Date and time of the service" required></textarea>
+            <button type="submit" class="hero-btn">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JavaScript for Menu Toggle -->
+  <script>
+    var navLinks = document.getElementById("navLinks");
+    function showMenu(){
+      navLinks.style.right = "0";
+    }
+    function hideMenu(){
+      navLinks.style.right = "-200px";
+    }
+  </script>
+
+  <!-- JavaScript for Smooth Scrolling with Offset and Menu Auto-Close -->
+  <script>
+    // Now selects all in-page links (not just nav links)
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetSection = document.querySelector(targetId);
+        if (targetSection) {
+          let offset = 0;
+          // Apply offset for larger screens (adjust as needed)
+          if (window.innerWidth > 700) {
+            offset = 150;
+          }
+          const elementPosition = targetSection.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - offset;
+          
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+        // Close the mobile menu if it's open
+        if (window.innerWidth <= 700) {
+          hideMenu();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
