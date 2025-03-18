@@ -1,11 +1,5 @@
 html {
-  zoom: 0.8; /* Scales the entire page to 80% */
-}
-
-@media (max-width: 700px) {
-  html {
-    zoom: 1; /* Reset zoom for mobile */
-  }
+  font-size: 75%; /* Scales all font sizes to 80% */
 }
 
 /* Your existing CSS */
@@ -69,7 +63,7 @@ nav img {
   color: #fff;
   font-weight: 400;
   text-decoration: none;
-  font-size: 21px;
+  font-size: 1.3125rem; /* Originally 21px, now scaled to 80% (16.8px) */
   font-family: "Outfit", sans-serif;
 }
 
@@ -101,13 +95,13 @@ nav img {
 }
 
 .text-box h1 {
-  font-size: 80px;
+  font-size: 5rem; /* Originally 80px, now scaled to 80% (64px) */
   font-family: "Petit Formal Script", cursive;
 }
 
 .text-box p {
   margin: 30px 0px 40px;
-  font-size: 40px;
+  font-size: 2.5rem; /* Originally 40px, now scaled to 80% (32px) */
   font-family: "Outfit", sans-serif;
   color: #030738;
 }
@@ -118,7 +112,7 @@ nav img {
   color: #030738;
   border: 1px solid #030738;
   padding: 15px 40px;
-  font-size: 25px;
+  font-size: 1.5625rem; /* Originally 25px, now scaled to 80% (20px) */
   background: transparent;
   position: relative;
   cursor: pointer;
@@ -140,19 +134,19 @@ nav i[class*="fa-"] {
     display: block;
     color: #fff;
     margin: 10px;
-    font-size: 22px;
+    font-size: 1.375rem; /* Originally 22px, now scaled to 80% (17.6px) */
     cursor: pointer;
   }
   .hero-btn {
     padding: 10px 30px;
-    font-size: 20px;
+    font-size: 1.25rem; /* Originally 20px, now scaled to 80% (16px) */
   }
   .text-box h1 {
-    font-size: 40px;
+    font-size: 2.5rem; /* Originally 40px, now scaled to 80% (32px) */
     font-family: "Petit Formal Script", cursive;
   }
   .text-box p {
-    font-size: 20px;
+    font-size: 1.25rem; /* Originally 20px, now scaled to 80% (16px) */
   }
   .nav-links ul li {
     display: block;
@@ -172,7 +166,7 @@ nav i[class*="fa-"] {
     padding: 14px;
   }
   .nav-links ul li a {
-    font-size: 20px;
+    font-size: 1.25rem; /* Originally 20px, now scaled to 80% (16px) */
   }
 }
 
@@ -205,7 +199,7 @@ nav i[class*="fa-"] {
 
 .about h1 {
   text-align: center;
-  font-size: 55px;
+  font-size: 3.4375rem; /* Originally 55px, now scaled to 80% (44px) */
   margin-top: -40px;
   margin-bottom: 80px;
   position: relative;
@@ -224,7 +218,7 @@ nav i[class*="fa-"] {
 
 .about-content p {
   width: 50%;
-  font-size: 30px;
+  font-size: 1.875rem; /* Originally 30px, now scaled to 80% (24px) */
   font-weight: 400;
   text-align: left;
   line-height: 1.6;
@@ -238,7 +232,7 @@ nav i[class*="fa-"] {
 
 @media (max-width: 700px) {
   .about h1 {
-    font-size: 35px;
+    font-size: 2.1875rem; /* Originally 35px, now scaled to 80% (28px) */
   }
   .about-content {
     flex-direction: column;
@@ -251,7 +245,7 @@ nav i[class*="fa-"] {
   }
   .about-content p {
     width: 90%;
-    font-size: 20px;
+    font-size: 1.25rem; /* Originally 20px, now scaled to 80% (16px) */
     text-align: center;
   }
 }
@@ -285,7 +279,7 @@ nav i[class*="fa-"] {
 
 .contact h1 {
   text-align: center;
-  font-size: 55px;
+  font-size: 3.4375rem; /* Originally 55px, now scaled to 80% (44px) */
   margin-top: -40px;
   margin-bottom: 80px;
   position: relative;
@@ -305,7 +299,7 @@ nav i[class*="fa-"] {
 
 .contact-content p {
   width: 50%;
-  font-size: 35px;
+  font-size: 2.1875rem; /* Originally 35px, now scaled to 80% (28px) */
   font-weight: 400;
   text-align: left;
   line-height: 2;
@@ -319,7 +313,7 @@ nav i[class*="fa-"] {
 
 @media (max-width: 700px) {
   .contact h1 {
-    font-size: 35px;
+    font-size: 2.1875rem; /* Originally 35px, now scaled to 80% (28px) */
   }
   .contact-content {
     flex-direction: column;
@@ -332,7 +326,7 @@ nav i[class*="fa-"] {
   }
   .contact-content p {
     width: 90%;
-    font-size: 20px;
+    font-size: 1.25rem; /* Originally 20px, now scaled to 80% (16px) */
     text-align: center;
   }
 }
@@ -382,7 +376,7 @@ nav i[class*="fa-"] {
 }
 
 .book h1 {
-  font-size: 55px;
+  font-size: 3.4375rem; /* Originally 55px, now scaled to 80% (44px) */
   margin-top: -40px;
   margin-bottom: 80px;
   position: relative;
@@ -390,7 +384,7 @@ nav i[class*="fa-"] {
 }
 
 .book-content p {
-  font-size: 35px;
+  font-size: 2.1875rem; /* Originally 35px, now scaled to 80% (28px) */
   line-height: 2;
   padding-right: 100px;
 }
@@ -403,14 +397,14 @@ nav i[class*="fa-"] {
   outline: none;
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-size: 18px;
+  font-size: 1.125rem; /* Originally 18px, now scaled to 80% (14.4px) */
   font-weight: 700;
   color: #000000;
 }
 
 .book-col input::placeholder,
 .book-col textarea::placeholder {
-  font-size: 18px;
+  font-size: 1.125rem; /* Originally 18px, now scaled to 80% (14.4px) */
   font-weight: 400;
   color: #646464;
 }
@@ -420,7 +414,7 @@ nav i[class*="fa-"] {
   color: #fff;
   border: none;
   padding: 15px 25px;
-  font-size: 20px;
+  font-size: 1.25rem; /* Originally 20px, now scaled to 80% (16px) */
   font-weight: 700;
   border-radius: 5px;
   cursor: pointer;
@@ -433,7 +427,7 @@ nav i[class*="fa-"] {
 
 @media (max-width: 700px) {
   .book h1 {
-    font-size: 35px;
+    font-size: 2.1875rem; /* Originally 35px, now scaled to 80% (28px) */
     text-align: center;
   }
   .book-content {
@@ -447,7 +441,7 @@ nav i[class*="fa-"] {
     text-align: center;
   }
   .book-content p {
-    font-size: 20px;
+    font-size: 1.25rem; /* Originally 20px, now scaled to 80% (16px) */
     text-align: center;
     padding-right: 0;
   }
