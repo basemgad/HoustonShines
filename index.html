@@ -1,22 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Clarity Quest</title>
-  <link rel="stylesheet" href="style.css">
+  <!-- Consolidated font links -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Petit+Formal+Script&family=Noto+Sans+JP:wght@100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/all.min.css">
 </head>
 <body>
   <!-- 
-    We add the class "finisher-header" here so the library knows 
-    which element to target (we'll specify "className": "finisher-header" in our config).
+    We add the class "finisher-header" so the library knows which element to target.
   -->
   <section id="home" class="header finisher-header">
     <nav>
@@ -40,10 +37,8 @@
     </div>
   </section>
 
-  <!-- 1) Include the Finisher Header script -->
+  <!-- Finisher Header Script -->
   <script src="finisher-header.es5.min.js"></script>
-
-  <!-- 2) Initialize Finisher Header with a config object -->
   <script>
     new FinisherHeader({
       "count": 12,
@@ -84,7 +79,7 @@
     });
   </script>
 
-  <!-- About -->
+  <!-- About Section -->
   <section id="about" class="about">
     <div class="about-inner">
       <h1>About Us</h1>
@@ -98,17 +93,15 @@
     </div>
   </section>
  
-  <!-- Contact -->
+  <!-- Contact Section -->
   <section id="contact" class="contact">
     <div class="contact-inner">
       <h1>Contact Us</h1>
       <div class="contact-content">
         <p>
-          Have questions or ready to book your window cleaning? <br>
-          <br>
+          Have questions or ready to book your window cleaning? <br><br>
           📞 Call or Text: (832) 715-4136<br>
-          📧 Email: spitshinebarstool@gmail.com <br>
-          <br>
+          📧 Email: spitshinebarstool@gmail.com <br><br>
           We’ll get back to you quickly—let’s make your windows shine!
         </p>
         <img src="images/qw.png" alt="Contact Image">
@@ -116,7 +109,7 @@
     </div>
   </section>
 
-  <!-- Book -->
+  <!-- Book Section -->
   <section id="book" class="book">
     <div class="book-inner">
       <div class="book-content">
@@ -127,13 +120,12 @@
             Fill out your details and I’ll personally reach out to you as soon as possible. Whether it’s a quote, a question, or scheduling a cleaning, I’ve got you covered. Fast, friendly, and no hassle—just clear communication and crystal-clear windows.
           </p>
         </div>
-
         <div class="book-col">
           <form action="form-handler.php" method="post">
-            <input type="text" name = "name" placeholder="Enter your name" required>
-            <input type="email" name = "email" placeholder="Enter email address" required>
-            <input type="text" name = "phone"  placeholder="Enter phone number" required>
-            <textarea rows="8" name = "time"  placeholder="Date and time of the service" required></textarea>
+            <input type="text" name="name" placeholder="Enter your name" required>
+            <input type="email" name="email" placeholder="Enter email address" required>
+            <input type="text" name="phone" placeholder="Enter phone number" required>
+            <textarea rows="8" name="time" placeholder="Date and time of the service" required></textarea>
             <button type="submit" class="hero-btn">Send Message</button>
           </form>
         </div>
@@ -141,7 +133,7 @@
     </div>
   </section>
 
-  <!-- JavaScript for Menu Toggle -->
+  <!-- Menu Toggle Scripts -->
   <script>
     var navLinks = document.getElementById("navLinks");
     function showMenu(){
@@ -152,9 +144,8 @@
     }
   </script>
 
-  <!-- JavaScript for Smooth Scrolling with Offset and Menu Auto-Close -->
+  <!-- Smooth Scrolling with Offset and Menu Auto-Close -->
   <script>
-    // Now selects all in-page links (not just nav links)
     document.querySelectorAll('a[href^="#"]').forEach(link => {
       link.addEventListener('click', function(e) {
         e.preventDefault();
@@ -162,22 +153,12 @@
         const targetSection = document.querySelector(targetId);
         if (targetSection) {
           let offset = 0;
-          // Apply offset for larger screens (adjust as needed)
-          if (window.innerWidth > 700) {
-            offset = 150;
-          }
+          if (window.innerWidth > 700) { offset = 150; }
           const elementPosition = targetSection.getBoundingClientRect().top;
           const offsetPosition = elementPosition + window.pageYOffset - offset;
-          
-          window.scrollTo({
-            top: offsetPosition,
-            behavior: 'smooth'
-          });
+          window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
         }
-        // Close the mobile menu if it's open
-        if (window.innerWidth <= 700) {
-          hideMenu();
-        }
+        if (window.innerWidth <= 700) { hideMenu(); }
       });
     });
   </script>
