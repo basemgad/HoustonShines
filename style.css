@@ -5,11 +5,17 @@ html {
 html, body {
   overflow-x: hidden;
 }
-
+/* Option 1: Using the zoom property (works in Chrome, Edge, etc.) */
 body {
+  zoom: 0.8;  /* Scales to 80% */
+  
+  /* 
+  Option 2: Using transform (for broader compatibility)
+  Uncomment the lines below and comment out the zoom property above if needed:
+  
   transform: scale(0.8);
-  transform-origin: top;
-  width: 125%; /* Compensate for scale to maintain full width */
+  transform-origin: top left;
+  */
 }
 
 
