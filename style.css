@@ -311,7 +311,7 @@ nav i[class*="fa-"] {
   padding-top: 170px;
   padding-bottom: 200px;
   background: url("images/timothy-flippo-qyQE1KfBwA4-unsplash.jpg") center center / cover no-repeat;
-  color: ##000000;
+  color: #000000;
 }
 .book::before {
   content: "";
