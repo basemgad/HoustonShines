@@ -4,7 +4,7 @@ $customer_email = $_POST['email'];
 $customer_phone = $_POST['phone'];
 $customer_time = $_POST['time'];
 
-$email_from = 'basemga8@gmail.com'
+$email_from = 'info@basemgad.github.io'
 
 $email_subject = "New Appointment"
 
