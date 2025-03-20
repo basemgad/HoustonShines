@@ -1,12 +1,10 @@
 html {
-  font-size: 10px;
+  font-size: 7.5px; /* 10px * 0.75 */
 }
 
 html, body {
   overflow-x: hidden;
 }
-
-
 
 * {
   margin: 0;
@@ -31,6 +29,7 @@ html, body {
   width: 100%;
   position: relative;
 }
+
 /* top bar */
 nav {
   display: flex;
@@ -41,7 +40,7 @@ nav {
   width: 100%;
 }
 nav img {
-  width: 260px;
+  width: 195px;
 }
 .nav-links {
   flex: 1;
@@ -51,7 +50,7 @@ nav img {
 .nav-links ul li {
   list-style: none;
   display: inline-block;
-  margin: 0 30px;
+  margin: 0 22.5px; /* 0 30px scaled to 0 22.5px */
 }
 /* 2) Make <a> inline-block and position: relative for the pseudo-element */
 .nav-links ul li a {
@@ -61,7 +60,7 @@ nav img {
   color: #fff;
   font-weight: 400;
   text-decoration: none;
-  font-size: 21px;
+  font-size: 15.75px; /* 21px * 0.75 */
   font-family: "Outfit", sans-serif;
 }
 /* 3) The pseudo-element is the same width as the <a>, which now equals text width */
@@ -90,21 +89,21 @@ nav img {
   text-align: center;
 }
 .text-box h1 {
-  margin-top: 3%;
-  font-size: 80px;
+  margin-top: 2.25%; /* 3% scaled to 2.25% */
+  font-size: 60px; /* 80px * 0.75 */
   font-family: "Petit Formal Script", cursive;
 }
 
 .text-box .houston {
-  margin: 30px 0px 20px;
-  font-size: 45px;
+  margin: 22.5px 0 15px; /* 30px 0 20px scaled to 22.5px 0 15px */
+  font-size: 33.75px; /* 45px * 0.75 */
   font-weight: 700;
   font-family: "Outfit", sans-serif;
   color: #030738;
 }
 .text-box p {
-  margin: 20px 0px 40px;
-  font-size: 35px;
+  margin: 15px 0 30px; /* 20px 0 40px scaled to 15px 0 30px */
+  font-size: 26.25px; /* 35px * 0.75 */
   font-family: "Outfit", sans-serif;
   color: #030738;
 }
@@ -112,9 +111,9 @@ nav img {
   display: inline-block;
   text-decoration: none;
   color: #030738;
-  border: 2px solid #030738;
-  padding: 17px 42px;
-  font-size: 35px;
+  border: 1px solid #030738;
+  padding: 13px 30px;
+  font-size: 26.25px; /* 35px * 0.75 */
   background: transparent;
   position: relative;
   cursor: pointer;
@@ -132,29 +131,29 @@ nav i[class*="fa-"] {
   nav i[class*="fa-"] {
     display: block;
     color: #fff;
-    margin: 10px;
+    margin: 7.5px; /* 10px scaled to 7.5px */
     font-size: 22px;
     cursor: pointer;
   }
   .hero-btn {
     padding: 10px 30px;
-    font-size: 20px;
+    font-size: 20px; /* kept as-is for mobile if intended */
   }
   .text-box h1 {
-    font-size: 40px;
+    font-size: 30px; /* 40px * 0.75 */
     font-family: "Petit Formal Script", cursive;
   }
-  .text-box .houston{
-    font-size: 23px;
+  .text-box .houston {
+    font-size: 17.25px; /* 23px * 0.75 */
   }
   .text-box p {
-    font-size: 20px;
+    font-size: 15px; /* 20px * 0.75 */
   }
   .nav-links ul li {
     display: block;
   }
   .nav-links {
-    position: fixed; /* Changed from absolute to fixed */
+    position: fixed;
     background: rgb(12, 39, 88);
     height: 100vh;
     width: 200px;
@@ -168,7 +167,7 @@ nav i[class*="fa-"] {
     padding: 14px;
   }
   .nav-links ul li a {
-    font-size: 20px;
+    font-size: 15px; /* 20px * 0.75 */
   }
 }
 
@@ -178,8 +177,8 @@ nav i[class*="fa-"] {
   font-family: "Outfit", sans-serif;
   width: 100%;
   margin: 0;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 150px;
+  padding-bottom: 150px;
   background: url("images/rob-wingate-Fd9tUmRBJzk-unsplash.jpg") center center / cover no-repeat;
   color: #fff;
 }
@@ -199,9 +198,9 @@ nav i[class*="fa-"] {
 }
 .about h1 {
   text-align: center;
-  font-size: 55px;
-  margin-top: -40px;
-  margin-bottom: 80px;
+  font-size: 41.25px; /* 55px * 0.75 */
+  margin-top: -30px; /* -40px scaled to -30px */
+  margin-bottom: 60px; /* 80px scaled to 60px */
   position: relative;
   z-index: 1;
 }
@@ -212,11 +211,11 @@ nav i[class*="fa-"] {
   gap: 20px;
   position: relative;
   z-index: 1;
-  margin-top: 50px;
+  margin-top: 37.5px; /* 50px scaled to 37.5px */
 }
 .about-content p {
   width: 50%;
-  font-size: 35px;
+  font-size: 26.25px; /* 35px * 0.75 */
   font-weight: 400;
   text-align: left;
   line-height: 2;
@@ -228,31 +227,32 @@ nav i[class*="fa-"] {
 }
 @media (max-width: 700px) {
   .about h1 {
-    font-size: 35px;
+    font-size: 35px; /* kept as-is for mobile if intended */
   }
   .about-content {
     flex-direction: column;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 22.5px; /* 30px scaled to 22.5px */
   }
   .about-content img {
     width: 90%;
-    margin-top: 20px;
+    margin-top: 15px; /* 20px scaled to 15px */
   }
   .about-content p {
     width: 90%;
-    font-size: 20px;
+    font-size: 17px; /* kept as-is for mobile if intended */
     text-align: center;
   }
 }
+
 /* Contact Section */
 .contact {
   position: relative;
   font-family: "Outfit", sans-serif;
   width: 100%;
   margin: 0;
-  padding-top: 200px;
-  padding-bottom: 170px;
+  padding-top: 150px;
+  padding-bottom: 150px;
   background: url("images/sssss.jpg") center center / cover no-repeat;
   color: #030738;
 }
@@ -272,9 +272,9 @@ nav i[class*="fa-"] {
 }
 .contact h1 {
   text-align: center;
-  font-size: 55px;
-  margin-top: -40px;
-  margin-bottom: 80px;
+  font-size: 41.25px; /* 55px * 0.75 */
+  margin-top: -30px; /* -40px scaled to -30px */
+  margin-bottom: 60px; /* 80px scaled to 60px */
   position: relative;
   z-index: 1;
 }
@@ -286,11 +286,11 @@ nav i[class*="fa-"] {
   gap: 20px;
   position: relative;
   z-index: 1;
-  margin-top: 50px;
+  margin-top: 37.5px; /* 50px scaled to 37.5px */
 }
 .contact-content p {
   width: 50%;
-  font-size: 37px;
+  font-size: 27.75px; /* 37px * 0.75 */
   font-weight: 400;
   text-align: left;
   line-height: 2;
@@ -302,23 +302,24 @@ nav i[class*="fa-"] {
 }
 @media (max-width: 700px) {
   .contact h1 {
-    font-size: 35px;
+    font-size: 35px; /* kept as-is for mobile if intended */
   }
   .contact-content {
     flex-direction: column;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 22.5px; /* 30px scaled to 22.5px */
   }
   .contact-content img {
     width: 70%;
-    margin-top: 30px;
+    margin-top: 22.5px; /* 30px scaled to 22.5px */
   }
   .contact-content p {
     width: 90%;
-    font-size: 20px;
+    font-size: 20px; /* kept as-is for mobile if intended */
     text-align: center;
   }
 }
+
 .book {
   position: relative;
   font-family: "Outfit", sans-serif;
@@ -348,7 +349,7 @@ nav i[class*="fa-"] {
 .book-content {
   display: flex;
   align-items: flex-start;
-  gap: 80px;
+  gap: 60px; /* 80px scaled to 60px */
   justify-content: flex-start;
 }
 .book-col {
@@ -358,32 +359,32 @@ nav i[class*="fa-"] {
   flex: 0 0 60%;
 }
 .book h1 {
-  font-size: 55px;
-  margin-top: -40px;
-  margin-bottom: 80px;
+  font-size: 41.25px; /* 55px * 0.75 */
+  margin-top: -30px; /* -40px scaled to -30px */
+  margin-bottom: 60px; /* 80px scaled to 60px */
   position: relative;
   z-index: 1;
 }
 .book-content p {
-  font-size: 35px;
+  font-size: 26.25px; /* 35px * 0.75 */
   line-height: 2;
   padding-right: 100px;
 }
 .book-col input,
 .book-col textarea {
-  width: 100%;
+  width: 85%;
   padding: 15px;
-  margin-bottom: 17px;
+  margin-bottom: 12.75px; /* 17px scaled to 12.75px */
   outline: none;
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-size: 18px;
+  font-size: 13.5px; /* 18px * 0.75 */
   font-weight: 700;
   color: #000000;
 }
 .book-col input::placeholder,
 .book-col textarea::placeholder {
-  font-size: 18px;
+  font-size: 13.5px; /* 18px * 0.75 */
   font-weight: 400;
   color: #646464;
 }
@@ -391,25 +392,28 @@ nav i[class*="fa-"] {
   background-color: #00b7ff;
   color: #fff;
   border: none;
-  padding: 15px 25px;
-  font-size: 20px;
+  padding: 11px 19px;
+  font-size: 15px; /* 20px * 0.75 */
   font-weight: 700;
-  border-radius: 5px;
+  border-radius: 1px;
   cursor: pointer;
   transition: background-color 0.3s;
+  display: block;      /* Makes the button occupy its own line */
+  margin-top: 7px;    /* Adds space above the button */
 }
 .book .hero-btn:hover {
   background-color: #006bb3;
 }
+
 @media (max-width: 700px) {
   .book h1 {
-    font-size: 35px;
+    font-size: 26.25px; /* 35px * 0.75 */
     text-align: center;
   }
   .book-content {
     flex-direction: column;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 22.5px; /* 30px scaled to 22.5px */
   }
   .book-text {
     width: 90%;
@@ -417,13 +421,26 @@ nav i[class*="fa-"] {
     text-align: center;
   }
   .book-content p {
-    font-size: 20px;
+    font-size: 20px; /* 20px * 0.75 */
     text-align: center;
     padding-right: 0;
   }
   .book-col {
     flex: 0 0 auto;
-    width: 90%;
-    margin: 0;
+    width: 100%;
+    margin: 0 auto; /* center the container */
+    text-align: center; /* center the form inside */
+  }
+  .book-col form {
+    display: inline-block; /* forces the form to shrink-wrap and center */
+  }
+  .book .hero-btn {
+  margin: auto;
+  margin-top: 7px;
+  background-color: #00b7ff;
+  }
+  .book .hero-btn:hover {
+    background-color: #006bb3;
   }
 }
+
