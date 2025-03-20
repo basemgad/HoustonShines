@@ -12,6 +12,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/all.min.css">
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+
+
 </head>
 <body>
   <!-- 
@@ -107,7 +112,7 @@
           Have questions or ready to book your window cleaning? <br>
           <br>
           📞 Call or Text: (832) 715-4136<br>
-          📧 Email: spitshinebarstool@gmail.com<br>
+          📧 Email: spitshinebarstool@gmail.com <br>
           <br>
           We’ll get back to you quickly—let’s make your windows shine!
         </p>
@@ -129,14 +134,19 @@
         </div>
 
         <div class="book-col">
-          <form action="form-handler.php" method="post">
-            <input type="text" name = "name" placeholder="Enter your name" required>
-            <input type="email" name = "email" placeholder="Enter email address" required>
-            <input type="text" name = "phone"  placeholder="Enter phone number" required>
-            <textarea rows="8" name = "time"  placeholder="Date and time of the service" required></textarea>
+          <form id="contactForm" action="https://formsubmit.co/kamikazikun12347@gmail.com" method="POST" >
+            <input type="text" id="name" placeholder="Enter your name" required>
+            <input type="email" id="email" placeholder="Enter email address" required>
+            <input type="text" id="phone" placeholder="Enter phone number" required>
+            <textarea id="time" rows="8" placeholder="Date and time of the service" required></textarea>
             <button type="submit" class="hero-btn">Send Message</button>
           </form>
         </div>
+        <script  src="https://smtpjs.com/v3/smtp.js"></script>
+        <script>
+
+
+        </script>
       </div>
     </div>
   </section>
