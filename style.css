@@ -90,12 +90,21 @@ nav img {
   text-align: center;
 }
 .text-box h1 {
+  margin-top: 3%;
   font-size: 80px;
   font-family: "Petit Formal Script", cursive;
 }
+
+.text-box .houston {
+  margin: 30px 0px 20px;
+  font-size: 45px;
+  font-weight: 700;
+  font-family: "Outfit", sans-serif;
+  color: #030738;
+}
 .text-box p {
-  margin: 30px 0px 40px;
-  font-size: 40px;
+  margin: 20px 0px 40px;
+  font-size: 35px;
   font-family: "Outfit", sans-serif;
   color: #030738;
 }
@@ -103,9 +112,9 @@ nav img {
   display: inline-block;
   text-decoration: none;
   color: #030738;
-  border: 1px solid #030738;
-  padding: 15px 40px;
-  font-size: 25px;
+  border: 2px solid #030738;
+  padding: 17px 42px;
+  font-size: 35px;
   background: transparent;
   position: relative;
   cursor: pointer;
@@ -134,6 +143,9 @@ nav i[class*="fa-"] {
   .text-box h1 {
     font-size: 40px;
     font-family: "Petit Formal Script", cursive;
+  }
+  .text-box .houston{
+    font-size: 23px;
   }
   .text-box p {
     font-size: 20px;
@@ -166,7 +178,7 @@ nav i[class*="fa-"] {
   font-family: "Outfit", sans-serif;
   width: 100%;
   margin: 0;
-  padding-top: 170px;
+  padding-top: 200px;
   padding-bottom: 200px;
   background: url("images/rob-wingate-Fd9tUmRBJzk-unsplash.jpg") center center / cover no-repeat;
   color: #fff;
@@ -204,13 +216,13 @@ nav i[class*="fa-"] {
 }
 .about-content p {
   width: 50%;
-  font-size: 30px;
+  font-size: 35px;
   font-weight: 400;
   text-align: left;
-  line-height: 1.6;
+  line-height: 2;
 }
 .about-content img {
-  width: 30%;
+  width: 32%;
   object-fit: cover;
   box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.568);
 }
@@ -224,7 +236,7 @@ nav i[class*="fa-"] {
     margin-top: 30px;
   }
   .about-content img {
-    width: 70%;
+    width: 90%;
     margin-top: 20px;
   }
   .about-content p {
@@ -239,7 +251,7 @@ nav i[class*="fa-"] {
   font-family: "Outfit", sans-serif;
   width: 100%;
   margin: 0;
-  padding-top: 170px;
+  padding-top: 200px;
   padding-bottom: 170px;
   background: url("images/sssss.jpg") center center / cover no-repeat;
   color: #030738;
@@ -278,7 +290,7 @@ nav i[class*="fa-"] {
 }
 .contact-content p {
   width: 50%;
-  font-size: 35px;
+  font-size: 37px;
   font-weight: 400;
   text-align: left;
   line-height: 2;
