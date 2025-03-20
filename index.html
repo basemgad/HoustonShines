@@ -133,12 +133,15 @@
           </p>
         </div>
 
-       <div class="book-col">
-          <form id="contactForm" action="https://formsubmit.co/kamikazikun12347@gmail.com" method="POST" >
+       
+        <div class="book-col">
+          <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" >
+            <input type="hidden" name="access_key" value="daeea682-2681-4615-92a5-b5ae240b5eb6">
             <input type="text" id="name" name = "Name" placeholder="Enter your name" required>
             <input type="email" id="email" name = "Email" placeholder="Enter email address" required>
             <input type="text" id="phone" name = "phone" placeholder="Enter phone number" required>
             <textarea id="time" rows="8" name = "Time " placeholder="Date and time of the service" required></textarea>
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
             <button type="submit" class="hero-btn">Send Message</button>
           </form>
         </div>
