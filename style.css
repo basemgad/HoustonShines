@@ -127,6 +127,46 @@ nav img {
 nav i[class*="fa-"] {
   display: none;
 }
+@media (min-width: 701px) and (max-width: 1540px) {
+  nav i[class*="fa-"] {
+    display: none;
+  }
+  .hero-btn {
+    padding: 10px 30px;
+    font-size: 25px; /* kept as-is for mobile if intended */
+  }
+  .text-box h1 {
+    font-size: 45px; /* 40px * 0.75 */
+    font-family: "Petit Formal Script", cursive;
+  }
+  .text-box .houston {
+    font-size: 30px; /* 23px * 0.75 */
+  }
+  .text-box p {
+    font-size: 25px; /* 20px * 0.75 */
+  }
+  .nav-links ul li {
+    display: inline-block;    /* Inline layout rather than block */
+    margin: 0 22.5px;         /* Use your original margin */
+  }
+  .nav-links {
+    position: static;         /* Remove fixed positioning */
+    background: transparent;  /* Remove mobile background */
+    height: auto;             /* Remove full viewport height */
+    width: auto;              /* Remove fixed width */
+    transition: none;         /* Remove transition if not needed */
+    text-align: right;        /* Keep the right alignment from the default styles */
+  }
+  
+  .nav-links ul {
+    padding: 7px;
+  }
+  .nav-links ul li a {
+    font-size: 15px; /* 20px * 0.75 */
+  }
+}
+
+
 @media (max-width: 700px) {
   nav i[class*="fa-"] {
     display: block;
@@ -225,6 +265,35 @@ nav i[class*="fa-"] {
   object-fit: cover;
   box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.568);
 }
+@media (min-width: 701px) and (max-width: 1540px) {
+  .about{
+    padding-top: 120px;
+    padding-bottom: 120px;
+    
+  }
+  .about h1 {
+    font-size: 41.25px; /* kept as-is for mobile if intended */
+  }
+  .about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    z-index: 1;
+    margin-top: 37.5px;  /* 30px scaled to 22.5px */
+  }
+  .about-content img {
+    width: 34%;
+    object-fit: cover;/* 20px scaled to 15px */
+  }
+  .about-content p {
+    width: 50%;
+    font-size: 22px; /* 35px * 0.75 */
+    text-align: left;
+  }
+}
+
 @media (max-width: 700px) {
   .about h1 {
     font-size: 35px; /* kept as-is for mobile if intended */
@@ -235,7 +304,7 @@ nav i[class*="fa-"] {
     margin-top: 22.5px; /* 30px scaled to 22.5px */
   }
   .about-content img {
-    width: 90%;
+    width: 80%;
     margin-top: 15px; /* 20px scaled to 15px */
   }
   .about-content p {
@@ -299,6 +368,36 @@ nav i[class*="fa-"] {
   width: 25%;
   object-fit: cover;
   box-shadow: 0px 0px 30px 10px rgba(50, 89, 148, 0.493);
+}
+@media (min-width: 701px) and (max-width: 1540px) {
+ .contact {
+
+  padding-top: 100px;
+  padding-bottom: 100px;
+  
+}
+  .contact h1 {
+    font-size: 41.25px; /* kept as-is for mobile if intended */
+  }
+  .contact-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    z-index: 1;
+    margin-top: 37.5px;  /* 30px scaled to 22.5px */
+  }
+  .contact-content img {
+    width: 25%;
+    object-fit: cover;/* 20px scaled to 15px */
+  }
+  .contact-content p {
+    width: 50%;
+    line-height: 1.7;
+    font-size: 30px; /* 35px * 0.75 */
+    text-align: left;
+  }
 }
 @media (max-width: 700px) {
   .contact h1 {
@@ -405,6 +504,22 @@ nav i[class*="fa-"] {
   background-color: #006bb3;
 }
 
+@media (min-width: 701px) and (max-width: 1540px) {
+.book{
+  padding-top: 130px;
+  padding-bottom: 120px;
+  
+}
+  .book-col {
+    flex: 0 0 auto;
+    width: 43%;
+    margin: 0 auto; /* center the container */
+    text-align: left; /* center the form inside */
+
+  }
+  
+}
+
 @media (max-width: 700px) {
   .book h1 {
     font-size: 26.25px; /* 35px * 0.75 */
@@ -443,4 +558,3 @@ nav i[class*="fa-"] {
     background-color: #006bb3;
   }
 }
-
